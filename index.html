@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <title>vue-slider</title>
+  </head>
+  <body>
+
+    <div id="root">
+
+      <div id="wrapper">
+        <div class="prev">
+          <i class="fas fa-chevron-left" @click="clicPrevImage"></i>
+        </div>
+        <div class="slide">
+          <img :src="images[imageIndex]" alt="panorama">
+        </div>
+        <div class="next">
+          <i class="fas fa-chevron-right" @click="clickNextImage"></i>
+        </div>
+        <div class="nav">
+          <i v-for="(image, index) in images" :class="(index == imageIndex) ? 'fas' : 'far'" class=" fa-circle"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
