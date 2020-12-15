@@ -59,4 +59,5 @@ img {
 .nav i {
   margin: 0 5px;
   color: white;
+  cursor: pointer;
 }

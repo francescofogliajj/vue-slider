@@ -24,6 +24,11 @@ var app = new Vue(
 
     methods: {
 
+      goToImage: function(newIndex) {
+        clearInterval(this.autoplay);
+        this.imageIndex = newIndex;
+      },
+
       clickNextImage: function() {
         clearInterval(this.autoplay);
         this.nextImage();
